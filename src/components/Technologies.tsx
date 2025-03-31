@@ -9,13 +9,13 @@ const Technologies: React.FC = () => {
       title: "Pro design dodržující praktiky UI/UX designu",
       description:
         "Mé pracovní postupy kombinují inovativní technologie a osvědčené metody pro maximální efektivitu.",
-      icon: faFigma,
+      icon: faShieldHalved,
     },
     {
       title: "Pro nejvyšší rychlost a responzivitu vašeho webu",
       description:
         "Používám nejmodernější technologie, které zajistí kvalitní a rychlé řešení.",
-      icon: faReact,
+      icon: faShieldHalved,
     },
     {
       title: "Pro bezpečnost vašich dat a soukromých údajů na webu",
