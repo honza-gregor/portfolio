@@ -6,11 +6,8 @@ import {
   faPhone,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-// import {
-//   faGithub,
-//   faFacebook,
-//   faInstagram,
-// } from "@fortawesome/free-brands-svg-icons";
+import { FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
+
 
 interface FooterProps {
   scrollToSection: (sectionId: string) => void;
@@ -94,7 +91,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#2B81EB] transition-colors"
               >
-                {/* <FontAwesomeIcon icon={faGithub} size="lg" /> */}
+                <FaGithub size={24} />
               </a>
               <a
                 href="https://facebook.com/honza.gregor"
@@ -102,7 +99,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#2B81EB] transition-colors"
               >
-                {/* <FontAwesomeIcon icon={faFacebook} size="lg" /> */}
+                <FaFacebook size={24} />
               </a>
               <a
                 href="https://instagram.com/honza.gregor"
@@ -110,7 +107,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#2B81EB] transition-colors"
               >
-                {/* <FontAwesomeIcon icon={faInstagram} size="lg" /> */}
+                <FaInstagram size={24} />
               </a>
             </div>
           </div>
