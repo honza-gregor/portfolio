@@ -1,7 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShieldHalved } from "@fortawesome/free-solid-svg-icons";
-// import { faFigma, faReact } from "";
+import { FaShieldAlt } from "react-icons/fa";
+import { SiFigma, SiReact } from "react-icons/si";
 
 const Technologies: React.FC = () => {
   const technologies = [
@@ -9,19 +8,19 @@ const Technologies: React.FC = () => {
       title: "Pro design dodržující praktiky UI/UX designu",
       description:
         "Mé pracovní postupy kombinují inovativní technologie a osvědčené metody pro maximální efektivitu.",
-      icon: faShieldHalved,
+      icon: SiFigma,
     },
     {
       title: "Pro nejvyšší rychlost a responzivitu vašeho webu",
       description:
         "Používám nejmodernější technologie, které zajistí kvalitní a rychlé řešení.",
-      icon: faShieldHalved,
+      icon: SiReact,
     },
     {
       title: "Pro bezpečnost vašich dat a soukromých údajů na webu",
       description:
         "Dbám také na denní kontroly, abychom zjistili vaše data bezpečná.",
-      icon: faShieldHalved,
+      icon: FaShieldAlt,
     },
   ];
 
@@ -35,8 +34,7 @@ const Technologies: React.FC = () => {
           {technologies.map((tech, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex justify-center mb-6">
-                <FontAwesomeIcon
-                  icon={tech.icon}
+                <tech.icon
                   className="text-4xl md:text-5xl lg:text-6xl text-[#2B81EB]"
                 />
               </div>
