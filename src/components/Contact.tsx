@@ -18,8 +18,8 @@ const Contact: React.FC = () => {
                             <h3 className="text-lg font-semibold text-[#394042] mb-2">Napište mi</h3>
                             <div className="flex items-center gap-3">
                                 <FontAwesomeIcon icon={faEnvelope} className="text-[#2B81EB]" />
-                                <a href="mailto:honza.gregor@email.cz" className="text-[#728087] hover:text-[#2B81EB] transition-colors">
-                                    honza.gregor@email.cz
+                                <a href="mailto:john.g22@seznam.cz" className="text-[#728087] hover:text-[#2B81EB] transition-colors">
+                                    john.g22@seznam.cz
                                 </a>
                             </div>
                         </div>

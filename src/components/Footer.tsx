@@ -6,7 +6,7 @@ import {
   faPhone,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import { FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaFacebook, FaInstagram, FaGlobe } from "react-icons/fa";
 
 
 interface FooterProps {
@@ -56,10 +56,10 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
               <div className="flex items-center gap-3 text-gray-300">
                 <FontAwesomeIcon icon={faEnvelope} className="text-[#2B81EB]" />
                 <a
-                  href="mailto:honza.gregor@email.cz"
+                  href="mailto:john.g22@seznam.cz"
                   className="hover:text-[#2B81EB] transition-colors"
                 >
-                  honza.gregor@email.cz
+                  john.g22@seznam.cz
                 </a>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
@@ -86,7 +86,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
             <h3 className="text-lg font-semibold">Sociální sítě</h3>
             <div className="flex gap-6">
               <a
-                href="https://github.com/honzagregor"
+                href="https://github.com/JohnG22"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#2B81EB] transition-colors"
@@ -94,15 +94,15 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://facebook.com/honza.gregor"
+                href="https://webni.cz/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#2B81EB] transition-colors"
               >
-                <FaFacebook size={24} />
+                <FaGlobe size={24} />
               </a>
               <a
-                href="https://instagram.com/honza.gregor"
+                href="https://www.instagram.com/honza.g22?igsh=MXFoeHVjY204cDEwZg=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-[#2B81EB] transition-colors"
