@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
                             <div className="flex items-center gap-3">
                                 <FontAwesomeIcon icon={faPhone} className="text-[#2B81EB]" />
                                 <a href="tel:+420608682944" className="text-[#728087] hover:text-[#2B81EB] transition-colors">
-                                    +420 608 682 944
+                                    +420 608 082 944
                                 </a>
                             </div>
                         </div>

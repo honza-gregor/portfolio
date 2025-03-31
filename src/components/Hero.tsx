@@ -20,14 +20,14 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button
-                                onClick={() => scrollToSection('sluzby')}
+                                onClick={() => scrollToSection('kontakt')}
                                 className="bg-[#2B81EB] text-white px-8 py-3 rounded-md hover:bg-[#4D87C0] transition-colors duration-300"
                             >
                                 Chci lepší web
 
                             </button>
                             <button
-                                onClick={() => scrollToSection('kontakt')}
+                                onClick={() => scrollToSection('sluzby')}
                                 className="border border-[#728087] text-[#394042] px-8 py-3 rounded-md hover:bg-gray-50 transition-colors duration-300"
                             >Zjistit více
                             </button>

@@ -68,7 +68,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                   href="tel:+420608682944"
                   className="hover:text-[#2B81EB] transition-colors"
                 >
-                  +420 608 682 944
+                  +420 608 082 944
                 </a>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
