@@ -1,6 +1,8 @@
-import React from 'react'
-import Scene3D from './Scene3D'
+import React, { Suspense, lazy } from 'react'
 import { motion } from 'framer-motion'
+
+// Lazy load Scene3D to improve initial load time
+const Scene3D = lazy(() => import('./Scene3D'))
 
 interface HeroProps {
     scrollToSection: (sectionId: string) => void;
@@ -29,8 +31,10 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
     };
 
     return (
-        <section className="relative min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden" id="hero">
-            <Scene3D />
+        <section className="relative min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden" id="hero" role="banner">
+            <Suspense fallback={<div className="absolute inset-0 bg-gray-100" />}>
+                <Scene3D />
+            </Suspense>
             <motion.div
                 className="relative max-w-7xl mx-auto"
                 initial="hidden"
@@ -42,24 +46,31 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
                         <motion.h1
                             className="text-4xl md:text-5xl font-bold text-[#394042] leading-tight mb-6"
                             variants={itemVariants}
+                            aria-label="Nejmodernější webové řešení dělané na míru pro vás"
+                            style={{ contentVisibility: 'auto' }}
                         >
                             Nejmodernější<br />webové řešení dělané<br />na míru pro vás
                         </motion.h1>
                         <motion.p
                             className="text-[#728087] text-lg mb-8"
                             variants={itemVariants}
+                            style={{ contentVisibility: 'auto' }}
                         >
                             Efektivní a inovativní webové stránky, které zajistí vaše očekávání a naplní komerční cíle, které dělají vaše podnikání úspěšné.
                         </motion.p>
                         <motion.div
                             className="flex flex-col sm:flex-row gap-4 justify-center"
                             variants={itemVariants}
+                            role="group"
+                            aria-label="Hlavní akce"
                         >
                             <motion.button
                                 onClick={() => scrollToSection('kontakt')}
                                 className="bg-[#2B81EB] text-white px-8 py-3 rounded-md hover:bg-[#4D87C0] transition-colors duration-300"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                aria-label="Chci lepší web - přejít na kontaktní formulář"
+                                role="button"
                             >
                                 Chci lepší web
                             </motion.button>
@@ -68,6 +79,8 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
                                 className="border-2 border-[#394042] text-[#394042] px-8 py-3 rounded-md hover:bg-[#394042] hover:text-white transition-colors duration-300"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                aria-label="Zjistit více o službách - přejít na sekci služeb"
+                                role="button"
                             >
                                 Zjistit více
                             </motion.button>
