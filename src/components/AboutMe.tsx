@@ -1,30 +1,30 @@
 import React from 'react'
-import { FaRocket, FaPalette, FaCode, FaHandshake } from 'react-icons/fa'
+import { FiZap, FiLayout, FiCode, FiTarget } from 'react-icons/fi'
 
 const AboutMe: React.FC = () => {
     const features = [
         {
             title: "Blesková rychlost",
             description: "Weby, které se načítají okamžitě a přitahují více návštěvníků.",
-            icon: FaRocket,
+            icon: FiZap,
             className: "md:col-span-2 bg-gradient-to-br from-blue-50 to-white"
         },
         {
             title: "Design, který zaujme",
             description: "Moderní a intuitivní rozhraní, které vaše zákazníky nadchne.",
-            icon: FaPalette,
+            icon: FiLayout,
             className: "md:col-span-1 bg-gradient-to-br from-blue-100 to-white"
         },
         {
             title: "Špičkové technologie",
             description: "Využívám nejnovější technologie pro maximální výkon a bezpečnost.",
-            icon: FaCode,
+            icon: FiCode,
             className: "md:col-span-1 bg-gradient-to-br from-blue-50 to-white"
         },
         {
             title: "Váš úspěch je můj úspěch",
             description: "Individuální přístup a společné dosažení vašich cílů.",
-            icon: FaHandshake,
+            icon: FiTarget,
             className: "md:col-span-2 bg-gradient-to-br from-blue-100 to-white"
         }
     ]

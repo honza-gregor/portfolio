@@ -1,13 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCode,
-  faEnvelope,
-  faPhone,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
+import { FiCode, FiMail, FiSmartphone, FiNavigation } from "react-icons/fi";
 import { FaGithub, FaFacebook, FaInstagram, FaGlobe } from "react-icons/fa";
-
 
 interface FooterProps {
   scrollToSection: (sectionId: string) => void;
@@ -24,7 +17,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
               onClick={() => scrollToSection("hero")}
               className="text-2xl font-bold hover:text-[#2B81EB] transition-colors flex items-center gap-2"
             >
-              <FontAwesomeIcon icon={faCode} className="text-xl" />
+              <FiCode className="text-xl" />
               <span>Honza Gregor</span>
             </button>
             <div className="flex flex-col space-y-3">
@@ -54,7 +47,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
             <h3 className="text-lg font-semibold">Kontaktní údaje</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-3 text-gray-300">
-                <FontAwesomeIcon icon={faEnvelope} className="text-[#2B81EB]" />
+                <FiMail className="text-[#2B81EB]" />
                 <a
                   href="mailto:john.g22@seznam.cz"
                   className="hover:text-[#2B81EB] transition-colors"
@@ -63,7 +56,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                 </a>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <FontAwesomeIcon icon={faPhone} className="text-[#2B81EB]" />
+                <FiSmartphone className="text-[#2B81EB]" />
                 <a
                   href="tel:+420608682944"
                   className="hover:text-[#2B81EB] transition-colors"
@@ -72,10 +65,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                 </a>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
-                <FontAwesomeIcon
-                  icon={faLocationDot}
-                  className="text-[#2B81EB]"
-                />
+                <FiNavigation className="text-[#2B81EB]" />
                 <span>Uherský Brod Nová 1 1263</span>
               </div>
             </div>

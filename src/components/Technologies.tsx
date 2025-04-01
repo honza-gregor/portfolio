@@ -1,6 +1,5 @@
 import React from "react";
-import { FaShieldAlt } from "react-icons/fa";
-import { SiFigma, SiReact } from "react-icons/si";
+import { SiFigma, SiReact, SiAuth0 } from "react-icons/si";
 
 const Technologies: React.FC = () => {
   const technologies = [
@@ -20,7 +19,7 @@ const Technologies: React.FC = () => {
       title: "Pro bezpečnost vašich dat a soukromých údajů na webu",
       description:
         "Dbám také na denní kontroly, abychom zjistili vaše data bezpečná.",
-      icon: FaShieldAlt,
+      icon: SiAuth0,
     },
   ];
 
@@ -32,22 +31,28 @@ const Technologies: React.FC = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {technologies.map((tech, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+            <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
               <div className="flex justify-center mb-6">
-                <tech.icon
-                  className="text-4xl md:text-5xl lg:text-6xl text-[#2B81EB]"
-                />
+                <div className="bg-[#F5F9FF] p-4 rounded-full transform hover:scale-110 transition-transform duration-300">
+                  <tech.icon
+                    className="text-4xl md:text-5xl lg:text-6xl text-[#2B81EB]"
+                  />
+                </div>
               </div>
               <h3 className="text-xl font-semibold text-[#394042] mb-4">
                 {tech.title}
               </h3>
-              <p className="text-[#728087] mb-4">{tech.description}</p>
-              <a
-                href="#"
-                className="text-[#2B81EB] hover:text-[#4D87C0] inline-flex items-center"
-              >
-                Zjistit více <span className="ml-2">→</span>
-              </a>
+              <p className="text-[#728087] mb-4 flex-grow">
+                {tech.description}
+              </p>
+              <div className="mt-auto">
+                <button
+                  className="border-2 border-[#2B81EB] text-[#2B81EB] px-6 py-2 rounded-full hover:bg-[#2B81EB] hover:text-white transition-all duration-300 inline-flex items-center group"
+                >
+                  Zjistit více
+                  <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </button>
+              </div>
             </div>
           ))}
         </div>

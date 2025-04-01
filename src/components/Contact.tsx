@@ -1,6 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { FiMail, FiNavigation, FiSmartphone } from 'react-icons/fi'
 
 const Contact: React.FC = () => {
     return (
@@ -17,7 +16,7 @@ const Contact: React.FC = () => {
                         <div>
                             <h3 className="text-lg font-semibold text-[#394042] mb-2">Napište mi</h3>
                             <div className="flex items-center gap-3">
-                                <FontAwesomeIcon icon={faEnvelope} className="text-[#2B81EB]" />
+                                <FiMail className="text-[#2B81EB]" />
                                 <a href="mailto:john.g22@seznam.cz" className="text-[#728087] hover:text-[#2B81EB] transition-colors">
                                     john.g22@seznam.cz
                                 </a>
@@ -26,7 +25,7 @@ const Contact: React.FC = () => {
                         <div>
                             <h3 className="text-lg font-semibold text-[#394042] mb-2">Zavolejte mi</h3>
                             <div className="flex items-center gap-3">
-                                <FontAwesomeIcon icon={faPhone} className="text-[#2B81EB]" />
+                                <FiSmartphone className="text-[#2B81EB]" />
                                 <a href="tel:+420608682944" className="text-[#728087] hover:text-[#2B81EB] transition-colors">
                                     +420 608 082 944
                                 </a>
@@ -35,7 +34,7 @@ const Contact: React.FC = () => {
                         <div>
                             <h3 className="text-lg font-semibold text-[#394042] mb-2">Kde mě najdete</h3>
                             <div className="flex items-center gap-3">
-                                <FontAwesomeIcon icon={faLocationDot} className="text-[#2B81EB]" />
+                                <FiNavigation className="text-[#2B81EB]" />
                                 <span className="text-[#728087]">Uherský Brod Nová 1 1263</span>
                             </div>
                         </div>
