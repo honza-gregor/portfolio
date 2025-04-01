@@ -54,7 +54,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
             </motion.button>
             <nav aria-label="Navigace v patičce">
               <div className="flex flex-col space-y-3">
-                {["sluzby", "portfolio", "kontakt"].map((section) => (
+                {["sluzby", "portfolio", "kontakt", "omne"].map((section) => (
                   <motion.button
                     key={section}
                     onClick={() => scrollToSection(section)}

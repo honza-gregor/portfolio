@@ -54,7 +54,7 @@ const Portfolio: React.FC = () => {
                         <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#2B81EB] rounded-full"></span>
                     </h2>
                     <p className="text-[#728087] dark:text-gray-400 text-lg max-w-2xl mx-auto mb-16">
-                        Díky zkušenostem nejrůznějších projektů a řešení jsem vytvořil moderní webových stránek. Mé služby zahrnují design, programování a optimalizaci pro výkon.
+                        Díky zkušenostem z nejrůznějších projektů a řešení mám zkušenosti s vytvářením nejrůznějších webových stránek. Mé služby zahrnují design, programování a optimalizaci pro výkon.
                     </p>
                 </motion.div>
                 <motion.div variants={itemVariants} className="px-4">

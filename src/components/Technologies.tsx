@@ -2,7 +2,11 @@ import React from "react";
 import { SiFigma, SiReact, SiAuth0 } from "react-icons/si";
 import { motion } from "framer-motion";
 
-const Technologies: React.FC = () => {
+interface TechnologiesProps {
+  scrollToSection: (sectionId: string) => void;
+}
+
+const Technologies: React.FC<TechnologiesProps> = ({ scrollToSection }) => {
   const technologies = [
     {
       title: "Pro design dodržující praktiky UI/UX designu",
@@ -81,10 +85,10 @@ const Technologies: React.FC = () => {
                   />
                 </div>
               </motion.div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
                 {tech.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-lg mb-6 flex-grow">
+              <p className="text-gray-600 dark:text-gray-300 text-lg mb-6 flex-grow text-center">
                 {tech.description}
               </p>
               <div className="mt-auto flex justify-center">
@@ -92,6 +96,7 @@ const Technologies: React.FC = () => {
                   className="border-2 border-[#2B81EB] text-[#2B81EB] px-6 py-2 rounded-full hover:bg-[#2B81EB] hover:text-white transition-all duration-300 inline-flex items-center group bg-white dark:bg-gray-800"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => window.open('https://webni.cz', '_blank')}
                 >
                   Zjistit více
                   <motion.span

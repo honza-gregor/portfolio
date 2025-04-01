@@ -27,7 +27,7 @@ function App() {
         <main>
           <Hero scrollToSection={scrollToSection} />
           <Services />
-          <Technologies />
+          <Technologies scrollToSection={scrollToSection} />
           <AboutMe />
           <Portfolio />
           <Contact />
