@@ -20,10 +20,11 @@ const Portfolio: React.FC = () => {
     return (
         <section className="py-20" id="portfolio">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#394042] mb-6">
-                    Case study (portfolio)
+                <h2 className="text-4xl md:text-5xl font-bold text-[#394042] mb-6 relative inline-block">
+                    Case study
+                    <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#2B81EB] rounded-full"></span>
                 </h2>
-                <p className="text-[#728087] max-w-2xl mx-auto mb-12">
+                <p className="text-[#728087] text-lg max-w-2xl mx-auto mb-12">
                     Díky zkušenostem nejrůznějších projektů a řešení jsem vytvořil moderní webových stránek. Mé služby zahrnují design, programování a optimalizaci pro výkon.
                 </p>
                 <Swiper

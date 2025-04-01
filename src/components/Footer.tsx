@@ -1,6 +1,6 @@
 import React from "react";
-import { FiCode, FiMail, FiSmartphone, FiNavigation } from "react-icons/fi";
-import { FaGithub, FaFacebook, FaInstagram, FaGlobe } from "react-icons/fa";
+import { FiMail, FiSmartphone, FiNavigation } from "react-icons/fi";
+import { FaGithub, FaInstagram, FaGlobe } from "react-icons/fa";
 
 interface FooterProps {
   scrollToSection: (sectionId: string) => void;
@@ -17,7 +17,6 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
               onClick={() => scrollToSection("hero")}
               className="text-2xl font-bold hover:text-[#2B81EB] transition-colors flex items-center gap-2"
             >
-              <FiCode className="text-xl" />
               <span>Honza Gregor</span>
             </button>
             <div className="flex flex-col space-y-3">

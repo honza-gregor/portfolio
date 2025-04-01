@@ -27,7 +27,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, scrollToSection 
                         onClick={() => handleNavClick('hero')}
                         className="text-2xl font-bold text-[#2B81EB] hover:text-[#4D87C0] transition-colors flex items-center gap-2"
                     >
-                        <FontAwesomeIcon icon={faCode} className="text-xl" />
+                        <FontAwesomeIcon icon={faCode} className="text-xl md:hidden" />
                         <span className="hidden sm:inline">Honza Gregor</span>
                     </button>
 
