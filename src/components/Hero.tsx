@@ -28,7 +28,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
                             </button>
                             <button
                                 onClick={() => scrollToSection('sluzby')}
-                                className="border border-[#728087] text-[#394042] px-8 py-3 rounded-md hover:bg-gray-50 transition-colors duration-300"
+                                className="border-2 border-[#394042] text-[#394042] px-8 py-3 rounded-md hover:bg-[#394042] hover:text-white transition-colors duration-300"
                             >Zjistit více
                             </button>
                         </div>

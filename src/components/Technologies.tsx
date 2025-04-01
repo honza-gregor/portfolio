@@ -47,7 +47,7 @@ const Technologies: React.FC = () => {
               </p>
               <div className="mt-auto">
                 <button
-                  className="border-2 border-[#2B81EB] text-[#2B81EB] px-6 py-2 rounded-full hover:bg-[#2B81EB] hover:text-white transition-all duration-300 inline-flex items-center group"
+                  className="border-2 border-[#2B81EB] text-[#2B81EB] px-6 py-2 rounded-full hover:bg-[#2B81EB] hover:text-white transition-all duration-300 inline-flex items-center group bg-white"
                 >
                   Zjistit více
                   <span className="ml-2 transform group-hover:translate-x-1 transition-transform duration-300">→</span>

@@ -23,19 +23,19 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
             <div className="flex flex-col space-y-3">
               <button
                 onClick={() => scrollToSection("sluzby")}
-                className="text-gray-300 hover:text-[#2B81EB] text-sm transition-colors w-fit"
+                className="text-gray-100 hover:text-[#2B81EB] text-sm transition-colors w-fit"
               >
                 Služby
               </button>
               <button
                 onClick={() => scrollToSection("portfolio")}
-                className="text-gray-300 hover:text-[#2B81EB] text-sm transition-colors w-fit"
+                className="text-gray-100 hover:text-[#2B81EB] text-sm transition-colors w-fit"
               >
                 Portfolio
               </button>
               <button
                 onClick={() => scrollToSection("kontakt")}
-                className="text-gray-300 hover:text-[#2B81EB] text-sm transition-colors w-fit"
+                className="text-gray-100 hover:text-[#2B81EB] text-sm transition-colors w-fit"
               >
                 Kontakt
               </button>
@@ -46,7 +46,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
           <div className="space-y-6">
             <h3 className="text-lg font-semibold">Kontaktní údaje</h3>
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-gray-300">
+              <div className="flex items-center gap-3 text-gray-100">
                 <FiMail className="text-[#2B81EB]" />
                 <a
                   href="mailto:john.g22@seznam.cz"
@@ -55,7 +55,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                   john.g22@seznam.cz
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-gray-300">
+              <div className="flex items-center gap-3 text-gray-100">
                 <FiSmartphone className="text-[#2B81EB]" />
                 <a
                   href="tel:+420608682944"
@@ -64,7 +64,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                   +420 608 082 944
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-gray-300">
+              <div className="flex items-center gap-3 text-gray-100">
                 <FiNavigation className="text-[#2B81EB]" />
                 <span>Uherský Brod Nová 1 1263</span>
               </div>
