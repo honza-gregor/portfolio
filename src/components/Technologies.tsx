@@ -46,7 +46,7 @@ const Technologies: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         initial="hidden"
@@ -55,7 +55,7 @@ const Technologies: React.FC = () => {
         variants={containerVariants}
       >
         <motion.div className="text-center mb-16" variants={itemVariants}>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#394042] mb-6 relative inline-block">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 relative inline-block">
             Jaké technologie používám pro váš úspěch
             <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#2B81EB] rounded-full"></span>
           </h2>
@@ -67,7 +67,7 @@ const Technologies: React.FC = () => {
           {technologies.map((tech, index) => (
             <motion.div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col h-full"
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-200 dark:border-gray-700"
               variants={itemVariants}
               whileHover={{ y: -5 }}
             >
@@ -75,21 +75,21 @@ const Technologies: React.FC = () => {
                 className="flex justify-center mb-6"
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="bg-[#F5F9FF] p-4 rounded-full">
+                <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-full">
                   <tech.icon
                     className="text-4xl md:text-5xl lg:text-6xl text-[#2B81EB]"
                   />
                 </div>
               </motion.div>
-              <h3 className="text-xl font-semibold text-[#394042] mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                 {tech.title}
               </h3>
-              <p className="text-[#728087] text-lg mb-6 flex-grow">
+              <p className="text-gray-600 dark:text-gray-300 text-lg mb-6 flex-grow">
                 {tech.description}
               </p>
               <div className="mt-auto flex justify-center">
                 <motion.button
-                  className="border-2 border-[#2B81EB] text-[#2B81EB] px-6 py-2 rounded-full hover:bg-[#2B81EB] hover:text-white transition-all duration-300 inline-flex items-center group bg-white"
+                  className="border-2 border-[#2B81EB] text-[#2B81EB] px-6 py-2 rounded-full hover:bg-[#2B81EB] hover:text-white transition-all duration-300 inline-flex items-center group bg-white dark:bg-gray-800"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

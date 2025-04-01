@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
 
   return (
     <motion.footer
-      className="bg-[#394042] text-white py-16"
+      className="bg-[#394042] dark:bg-gray-100 text-white dark:text-gray-900 py-16 transition-colors duration-200"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -40,9 +40,9 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
       aria-label="Patička webu"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand and Navigation */}
-          <motion.div className="space-y-6" variants={itemVariants}>
+          <motion.div variants={itemVariants}>
             <motion.button
               onClick={() => scrollToSection("hero")}
               className="text-2xl font-bold hover:text-[#2B81EB] transition-colors flex items-center gap-2"
@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                   <motion.button
                     key={section}
                     onClick={() => scrollToSection(section)}
-                    className="text-gray-100 hover:text-[#2B81EB] text-sm transition-colors w-fit"
+                    className="text-gray-100 dark:text-gray-700 hover:text-[#2B81EB] text-sm transition-colors w-fit"
                     whileHover={{ x: 5 }}
                     whileTap={{ scale: 0.95 }}
                     aria-label={`Přejít na sekci ${section.charAt(0).toUpperCase() + section.slice(1)}`}
@@ -71,11 +71,11 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
           </motion.div>
 
           {/* Contact Information */}
-          <motion.div className="space-y-6" variants={itemVariants}>
+          <motion.div variants={itemVariants}>
             <h3 className="text-lg font-semibold">Kontaktní údaje</h3>
             <div className="space-y-4" role="list">
               <motion.div
-                className="flex items-center gap-3 text-gray-100"
+                className="flex items-center gap-3 text-gray-100 dark:text-gray-700"
                 whileHover={{ x: 5 }}
                 role="listitem"
               >
@@ -89,7 +89,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                 </a>
               </motion.div>
               <motion.div
-                className="flex items-center gap-3 text-gray-100"
+                className="flex items-center gap-3 text-gray-100 dark:text-gray-700"
                 whileHover={{ x: 5 }}
                 role="listitem"
               >
@@ -103,7 +103,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                 </a>
               </motion.div>
               <motion.div
-                className="flex items-center gap-3 text-gray-100"
+                className="flex items-center gap-3 text-gray-100 dark:text-gray-700"
                 whileHover={{ x: 5 }}
                 role="listitem"
               >
@@ -114,7 +114,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
           </motion.div>
 
           {/* Social Media Links */}
-          <motion.div className="space-y-6" variants={itemVariants}>
+          <motion.div variants={itemVariants}>
             <h3 className="text-lg font-semibold">Sociální sítě</h3>
             <div className="flex gap-6" role="list">
               {[
@@ -127,7 +127,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-[#2B81EB] transition-colors"
+                  className="text-gray-300 dark:text-gray-600 hover:text-[#2B81EB] transition-colors"
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -142,7 +142,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
 
         {/* Copyright */}
         <motion.div
-          className="pt-8 border-t border-gray-700 text-center text-gray-400"
+          className="pt-8 border-t border-gray-700 dark:border-gray-300 text-center text-gray-400 dark:text-gray-600"
           variants={itemVariants}
         >
           <p>

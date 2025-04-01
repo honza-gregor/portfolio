@@ -7,6 +7,7 @@ import AboutMe from './components/AboutMe'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero')
@@ -20,18 +21,20 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation activeSection={activeSection} scrollToSection={scrollToSection} />
-      <main>
-        <Hero scrollToSection={scrollToSection} />
-        <Services />
-        <Technologies />
-        <AboutMe />
-        <Portfolio />
-        <Contact />
-      </main>
-      <Footer scrollToSection={scrollToSection} />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+        <Navigation activeSection={activeSection} scrollToSection={scrollToSection} />
+        <main>
+          <Hero scrollToSection={scrollToSection} />
+          <Services />
+          <Technologies />
+          <AboutMe />
+          <Portfolio />
+          <Contact />
+        </main>
+        <Footer scrollToSection={scrollToSection} />
+      </div>
+    </ThemeProvider>
   )
 }
 

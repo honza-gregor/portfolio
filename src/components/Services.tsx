@@ -48,7 +48,7 @@ const Services: React.FC = () => {
     };
 
     return (
-        <section className="py-24 bg-gradient-to-b from-gray-50 to-white" id="sluzby">
+        <section className="py-32 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 transition-colors duration-200" id="sluzby">
             <motion.div
                 className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
                 initial="hidden"
@@ -57,12 +57,12 @@ const Services: React.FC = () => {
                 variants={containerVariants}
             >
                 <motion.div className="text-center mb-16" variants={itemVariants}>
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#394042] mb-6 relative inline-block">
-                        Profesionální webové služby
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#394042] dark:text-white mb-6 relative inline-block">
+                        Služby
                         <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#2B81EB] rounded-full"></span>
                     </h2>
-                    <p className="text-[#728087] text-lg max-w-2xl mx-auto">
-                        Nabízím komplexní řešení pro vaši online přítomnost. Od návrhu až po implementaci zajistím, že váš web bude nejen vizuálně atraktivní, ale také efektivní a výkonný.
+                    <p className="text-[#728087] dark:text-gray-400 text-lg max-w-2xl mx-auto">
+                        Nabízím komplexní služby v oblasti webového vývoje a designu. Každý projekt je unikátní a přizpůsobuji se vašim specifickým potřebám.
                     </p>
                 </motion.div>
 
@@ -70,7 +70,7 @@ const Services: React.FC = () => {
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
-                            className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                            className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
                             variants={itemVariants}
                             whileHover={{ y: -5 }}
                         >
@@ -80,10 +80,10 @@ const Services: React.FC = () => {
                             >
                                 {service.icon}
                             </motion.div>
-                            <h3 className="text-xl font-semibold text-[#394042] mb-4 text-center">
+                            <h3 className="text-xl font-semibold text-[#394042] dark:text-white mb-4 text-center">
                                 {service.title}
                             </h3>
-                            <p className="text-[#728087] text-lg text-center">
+                            <p className="text-[#728087] dark:text-gray-400 text-lg text-center">
                                 {service.description}
                             </p>
                         </motion.div>
@@ -95,20 +95,20 @@ const Services: React.FC = () => {
                     variants={containerVariants}
                 >
                     <motion.div
-                        className="p-8 bg-white rounded-2xl shadow-lg"
+                        className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg"
                         variants={itemVariants}
                         whileHover={{ scale: 1.02 }}
                     >
                         <h3 className="text-4xl font-bold text-[#2B81EB] mb-4">3x</h3>
-                        <p className="text-[#728087] text-lg">Rychlejší načítání stránek díky moderní optimalizaci</p>
+                        <p className="text-[#728087] dark:text-gray-400 text-lg">Rychlejší načítání stránek díky moderní optimalizaci</p>
                     </motion.div>
                     <motion.div
-                        className="p-8 bg-white rounded-2xl shadow-lg"
+                        className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg"
                         variants={itemVariants}
                         whileHover={{ scale: 1.02 }}
                     >
                         <h3 className="text-4xl font-bold text-[#2B81EB] mb-4">100%</h3>
-                        <p className="text-[#728087] text-lg">Responzivní design pro všechna zařízení</p>
+                        <p className="text-[#728087] dark:text-gray-400 text-lg">Responzivní design pro všechna zařízení</p>
                     </motion.div>
                 </motion.div>
             </motion.div>

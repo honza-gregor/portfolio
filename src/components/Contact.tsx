@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <section className="py-24 bg-gradient-to-b from-gray-50 to-white" id="kontakt">
+        <section className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 transition-colors duration-200" id="kontakt">
             <motion.div
                 className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
                 initial="hidden"
@@ -34,11 +34,11 @@ const Contact: React.FC = () => {
                 variants={containerVariants}
             >
                 <motion.div className="text-center mb-16" variants={itemVariants}>
-                    <h2 className="text-4xl md:text-5xl font-bold text-[#394042] mb-6 relative inline-block">
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#394042] dark:text-white mb-6 relative inline-block">
                         Kontakt
                         <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-[#2B81EB] rounded-full"></span>
                     </h2>
-                    <p className="text-[#728087] text-lg max-w-2xl mx-auto">
+                    <p className="text-[#728087] dark:text-gray-400 text-lg max-w-2xl mx-auto">
                         Máte zájem o spolupráci nebo chcete vědět více? Neváhejte mě kontaktovat.
                     </p>
                 </motion.div>
@@ -47,20 +47,20 @@ const Contact: React.FC = () => {
                     variants={containerVariants}
                 >
                     <motion.div
-                        className="space-y-10 bg-white p-8 rounded-2xl shadow-lg min-h-[400px]"
+                        className="space-y-10 bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg min-h-[400px] transition-colors duration-200"
                         variants={itemVariants}
                     >
                         <motion.div
                             whileHover={{ scale: 1.02, x: 5 }}
                             className="cursor-pointer"
                         >
-                            <h3 className="text-xl font-semibold text-[#394042] mb-4 flex items-center gap-2">
+                            <h3 className="text-xl font-semibold text-[#394042] dark:text-white mb-4 flex items-center gap-2">
                                 <FiMail className="text-[#2B81EB]" />
                                 Napište mi
                             </h3>
                             <a
                                 href="mailto:john.g22@seznam.cz"
-                                className="text-[#728087] hover:text-[#2B81EB] transition-colors text-lg"
+                                className="text-[#728087] dark:text-gray-400 hover:text-[#2B81EB] transition-colors text-lg"
                             >
                                 john.g22@seznam.cz
                             </a>
@@ -69,13 +69,13 @@ const Contact: React.FC = () => {
                             whileHover={{ scale: 1.02, x: 5 }}
                             className="cursor-pointer"
                         >
-                            <h3 className="text-xl font-semibold text-[#394042] mb-4 flex items-center gap-2">
+                            <h3 className="text-xl font-semibold text-[#394042] dark:text-white mb-4 flex items-center gap-2">
                                 <FiSmartphone className="text-[#2B81EB]" />
                                 Zavolejte mi
                             </h3>
                             <a
                                 href="tel:+420608682944"
-                                className="text-[#728087] hover:text-[#2B81EB] transition-colors text-lg"
+                                className="text-[#728087] dark:text-gray-400 hover:text-[#2B81EB] transition-colors text-lg"
                             >
                                 +420 608 082 944
                             </a>
@@ -84,11 +84,11 @@ const Contact: React.FC = () => {
                             whileHover={{ scale: 1.02, x: 5 }}
                             className="cursor-pointer"
                         >
-                            <h3 className="text-xl font-semibold text-[#394042] mb-4 flex items-center gap-2">
+                            <h3 className="text-xl font-semibold text-[#394042] dark:text-white mb-4 flex items-center gap-2">
                                 <FiNavigation className="text-[#2B81EB]" />
                                 Kde mě najdete
                             </h3>
-                            <p className="text-[#728087] text-lg">
+                            <p className="text-[#728087] dark:text-gray-400 text-lg">
                                 Uherský Brod Nová 1 1263
                             </p>
                         </motion.div>

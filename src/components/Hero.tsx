@@ -14,7 +14,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2
+                staggerChildren: 0.1
             }
         }
     };
@@ -31,62 +31,54 @@ const Hero: React.FC<HeroProps> = ({ scrollToSection }) => {
     };
 
     return (
-        <section className="relative min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden" id="hero" role="banner">
+        <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-200" id="hero">
             <Suspense fallback={<div className="absolute inset-0 bg-gray-100" />}>
                 <Scene3D />
             </Suspense>
             <motion.div
-                className="relative max-w-7xl mx-auto"
+                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
                 initial="hidden"
                 animate="visible"
                 variants={containerVariants}
             >
-                <div className="flex flex-col items-center text-center">
-                    <div className="max-w-3xl">
-                        <motion.h1
-                            className="text-4xl md:text-5xl font-bold text-[#394042] leading-tight mb-6"
-                            variants={itemVariants}
-                            aria-label="Nejmodernější webové řešení dělané na míru pro vás"
-                            style={{ contentVisibility: 'auto' }}
-                        >
-                            Nejmodernější<br />webové řešení dělané<br />na míru pro vás
-                        </motion.h1>
-                        <motion.p
-                            className="text-[#728087] text-lg mb-8"
-                            variants={itemVariants}
-                            style={{ contentVisibility: 'auto' }}
-                        >
-                            Efektivní a inovativní webové stránky, které zajistí vaše očekávání a naplní komerční cíle, které dělají vaše podnikání úspěšné.
-                        </motion.p>
-                        <motion.div
-                            className="flex flex-col sm:flex-row gap-4 justify-center"
-                            variants={itemVariants}
-                            role="group"
-                            aria-label="Hlavní akce"
-                        >
-                            <motion.button
-                                onClick={() => scrollToSection('kontakt')}
-                                className="bg-[#2B81EB] text-white px-8 py-3 rounded-md hover:bg-[#4D87C0] transition-colors duration-300"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                aria-label="Chci lepší web - přejít na kontaktní formulář"
-                                role="button"
-                            >
-                                Chci lepší web
-                            </motion.button>
-                            <motion.button
-                                onClick={() => scrollToSection('sluzby')}
-                                className="border-2 border-[#394042] text-[#394042] px-8 py-3 rounded-md hover:bg-[#394042] hover:text-white transition-colors duration-300"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                aria-label="Zjistit více o službách - přejít na sekci služeb"
-                                role="button"
-                            >
-                                Zjistit více
-                            </motion.button>
-                        </motion.div>
-                    </div>
-                </div>
+                <motion.div variants={itemVariants} className="mb-8">
+                    <h1 className="text-5xl md:text-6xl font-bold text-[#394042] dark:text-white mb-6">
+                        Honza Gregor
+                    </h1>
+                    <h2 className="text-3xl md:text-4xl text-[#728087] dark:text-gray-300 mb-8">
+                        Web Developer & Designer
+                    </h2>
+                    <p className="text-xl text-[#728087] dark:text-gray-400 max-w-2xl mx-auto mb-12">
+                        Vytvářím moderní a responzivní webové stránky, které kombinují estetiku s funkcionalitou. Specializuji se na vývoj webových aplikací s důrazem na výkon a uživatelskou zkušenost.
+                    </p>
+                </motion.div>
+                <motion.div
+                    className="flex flex-col sm:flex-row gap-4 justify-center"
+                    variants={itemVariants}
+                    role="group"
+                    aria-label="Hlavní akce"
+                >
+                    <motion.button
+                        onClick={() => scrollToSection('kontakt')}
+                        className="bg-[#2B81EB] text-white px-8 py-3 rounded-md hover:bg-[#4D87C0] transition-colors duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        aria-label="Chci lepší web - přejít na kontaktní formulář"
+                        role="button"
+                    >
+                        Chci lepší web
+                    </motion.button>
+                    <motion.button
+                        onClick={() => scrollToSection('sluzby')}
+                        className="border-2 border-[#394042] dark:border-white text-[#394042] dark:text-white px-8 py-3 rounded-md hover:bg-[#394042] dark:hover:bg-white hover:text-white dark:hover:text-[#394042] transition-colors duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        aria-label="Zjistit více o službách - přejít na sekci služeb"
+                        role="button"
+                    >
+                        Zjistit více
+                    </motion.button>
+                </motion.div>
             </motion.div>
         </section>
     )

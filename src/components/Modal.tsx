@@ -13,7 +13,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, image, title }) => {
         <AnimatePresence>
             {isOpen && (
                 <motion.div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 dark:bg-opacity-90"
                     onClick={onClose}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -29,7 +29,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, image, title }) => {
                     >
                         <motion.button
                             onClick={onClose}
-                            className="absolute -top-12 right-0 text-white text-2xl hover:text-gray-300"
+                            className="absolute -top-12 right-0 text-white dark:text-gray-300 hover:text-gray-300 dark:hover:text-white text-2xl transition-colors"
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >
@@ -44,7 +44,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, image, title }) => {
                             <img
                                 src={image}
                                 alt={title}
-                                className="max-w-full max-h-[90vh] object-contain rounded-lg"
+                                className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
                             />
                         </motion.div>
                     </motion.div>
